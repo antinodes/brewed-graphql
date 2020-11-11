@@ -1,0 +1,19 @@
+type Query {
+    beer(id:ID!): Beer!
+    brewery(id:ID!): Brewery!
+}
+
+type Brewery {
+    id: ID!
+    name: String!
+    beers: [Beer!]!
+}
+
+type Beer {
+    id: ID!
+    name: String!
+    style: String!
+    abv: Float
+    srm: Int
+    brewer: Brewery!
+}
